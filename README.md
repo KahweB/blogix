@@ -1,0 +1,2 @@
+# blogix
+nextjs learning project
