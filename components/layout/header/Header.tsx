@@ -22,15 +22,19 @@ const Header = () => {
                     <Link href="/" className='text-white font-bold hover:underline'>Home</Link>
                     <Link href="/about" className='text-white font-bold hover:underline'>About</Link>
                     <Link href="/blog" className='text-white font-bold hover:underline'>Blog</Link>
+                    <Link href="/blogclientside" className='text-white font-bold hover:underline'>Blog</Link>
                     <Link href="/contact" className='text-white font-bold hover:underline'>Contact</Link>
                 </nav>
                 <div className='flex items-center space-x-3'>
                     <Button variant="secondary">
                         <Search />
                     </Button>
-                    <Button variant="secondary">
-                        <User />
-                    </Button>
+                    <Link href="/login">
+                        <Button variant="secondary">
+                            <User />
+                        </Button>
+                    </Link>
+
 
                     {/* <Sheet open={isNavbarOpen}>
                         <SheetTrigger asChild><Button onClick={() => setIsNavbarOpen(true)} className='md:hidden'><Menu /></Button></SheetTrigger>
