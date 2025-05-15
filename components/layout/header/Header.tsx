@@ -1,9 +1,20 @@
+"use client"
 import { Button } from '@/components/ui/button'
 import { Menu, Search, User } from 'lucide-react'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
+import {
+    Sheet,
+    SheetClose,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/ui/sheet"
 
 const Header = () => {
+    const [isNavbarOpen, setIsNavbarOpen] = useState(false);
     return (
         <div className='bg-secondarycolor shadow-sm top-0 z-50'>
             <div className='container mx-auto flex items-center justify-between px-4 py-3'>
@@ -21,9 +32,23 @@ const Header = () => {
                     <Button variant="secondary">
                         <User />
                     </Button>
-                    <Button variant="secondary" className='md:hidden '>
-                        <Menu />
-                    </Button>
+
+                    <Sheet open={isNavbarOpen}>
+                        <SheetTrigger asChild><Button onClick={() => setIsNavbarOpen(true)} className='md:hidden'><Menu /></Button></SheetTrigger>
+
+                        <SheetContent className='' onInteractOutside={() => setIsNavbarOpen(false)}>
+                            <SheetHeader>
+                                <SheetTitle>Menu</SheetTitle>
+                            </SheetHeader>
+                            <Link onClick={() => setIsNavbarOpen(false)} href="/" className='text-black font-bold hover:underline'>Home</Link>
+                            <Link onClick={() => setIsNavbarOpen(false)} href="/about" className='text-black font-bold hover:underline'>About</Link>
+                            <Link onClick={() => setIsNavbarOpen(false)} href="/blog" className='text-black font-bold hover:underline'>Blog</Link>
+                            <Link onClick={() => setIsNavbarOpen(false)} href="/contact" className='text-black font-bold hover:underline'>Contact</Link>
+                        </SheetContent>
+                    </Sheet>
+
+
+
                 </div>
             </div>
         </div>

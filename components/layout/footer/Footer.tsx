@@ -17,20 +17,17 @@ const Footer = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, necessitatibus praesentium</p>
                 </div>
                 <nav className='hidden md:flex space-x-6 '>
-                    <Link href="/" className='text-white font-bold hover:underline '>Home</Link>
-                    <Link href="/about" className='text-white font-bold hover:underline'>About</Link>
-                    <Link href="/blog" className='text-white font-bold hover:underline'>Blog</Link>
-                    <Link href="/contact" className='text-white font-bold hover:underline'>Contact</Link>
+
                 </nav>
                 <div className='flex flex-row space-x-4'>
-                    <Button variant="secondary">
+                    <Button variant="secondary" size="icon">
                         < FaFacebookF />
                     </Button>
-                    <Button variant="secondary">
+                    <Button variant="secondary" size="icon">
                         <FaGithub />
 
                     </Button>
-                    <Button variant="secondary">
+                    <Button variant="secondary" size="icon">
                         <FaInstagram />
 
                     </Button>
