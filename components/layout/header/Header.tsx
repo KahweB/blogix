@@ -1,20 +1,19 @@
-"use client"
+
 import { Button } from '@/components/ui/button'
-import { Menu, Search, User } from 'lucide-react'
+import { Search, User } from 'lucide-react'
 import Link from 'next/link'
-import React, { useState } from 'react'
-import {
+import MobileMenu from './MobileMenu'
+
+/* import {
     Sheet,
-    SheetClose,
     SheetContent,
-    SheetDescription,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
-} from "@/components/ui/sheet"
+} from "@/components/ui/sheet" */
 
 const Header = () => {
-    const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
     return (
         <div className='bg-secondarycolor shadow-sm top-0 z-50'>
             <div className='container mx-auto flex items-center justify-between px-4 py-3'>
@@ -33,7 +32,7 @@ const Header = () => {
                         <User />
                     </Button>
 
-                    <Sheet open={isNavbarOpen}>
+                    {/* <Sheet open={isNavbarOpen}>
                         <SheetTrigger asChild><Button onClick={() => setIsNavbarOpen(true)} className='md:hidden'><Menu /></Button></SheetTrigger>
 
                         <SheetContent className='' onInteractOutside={() => setIsNavbarOpen(false)}>
@@ -45,8 +44,8 @@ const Header = () => {
                             <Link onClick={() => setIsNavbarOpen(false)} href="/blog" className='text-black font-bold hover:underline'>Blog</Link>
                             <Link onClick={() => setIsNavbarOpen(false)} href="/contact" className='text-black font-bold hover:underline'>Contact</Link>
                         </SheetContent>
-                    </Sheet>
-
+                    </Sheet> */}
+                    <MobileMenu />
 
 
                 </div>
