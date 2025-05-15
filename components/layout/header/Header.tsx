@@ -22,7 +22,7 @@ const Header = () => {
                     <Link href="/" className='text-white font-bold hover:underline'>Home</Link>
                     <Link href="/about" className='text-white font-bold hover:underline'>About</Link>
                     <Link href="/blog" className='text-white font-bold hover:underline'>Blog</Link>
-                    <Link href="/blogclientside" className='text-white font-bold hover:underline'>Blog</Link>
+                    <Link href="/blogclientside" className='text-white font-bold hover:underline'>Blogamaclient</Link>
                     <Link href="/contact" className='text-white font-bold hover:underline'>Contact</Link>
                 </nav>
                 <div className='flex items-center space-x-3'>
