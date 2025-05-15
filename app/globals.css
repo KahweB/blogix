@@ -3,7 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+
 @theme inline {
+  --color-primarycolor: #38454a;
+  --color-secondarycolor: #2c373b;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -116,6 +120,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
