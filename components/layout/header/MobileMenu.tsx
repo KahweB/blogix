@@ -23,10 +23,10 @@ const MobileMenu = () => {
                     <SheetTitle>Menu</SheetTitle>
                 </SheetHeader>
                 <div className='flex flex-col content-center items-center h-full space-y-19'>
-                    <Link onClick={() => setIsNavbarOpen(false)} href="/" className='text-black text-2xl font-bold hover:underline'>Home</Link>
-                    <Link onClick={() => setIsNavbarOpen(false)} href="/about" className='text-black text-2xl font-bold hover:underline'>About</Link>
-                    <Link onClick={() => setIsNavbarOpen(false)} href="/blog" className='text-black text-2xl font-bold hover:underline'>Blog</Link>
-                    <Link onClick={() => setIsNavbarOpen(false)} href="/contact" className='text-black text-2xl font-bold hover:underline'>Contact</Link>
+                    <Link onClick={() => setIsNavbarOpen(false)} href="/" className='text-black dark:text-white text-2xl font-bold '>Home</Link>
+                    <Link onClick={() => setIsNavbarOpen(false)} href="/about" className='text-black dark:text-white text-2xl font-bold '>About</Link>
+                    <Link onClick={() => setIsNavbarOpen(false)} href="/blog" className='text-black dark:text-white text-2xl font-bold '>Blog</Link>
+                    <Link onClick={() => setIsNavbarOpen(false)} href="/contact" className='text-black dark:text-white text-2xl font-bold '>Contact</Link>
                 </div>
 
             </SheetContent>
