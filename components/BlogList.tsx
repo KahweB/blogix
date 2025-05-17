@@ -8,6 +8,7 @@ const BlogList = () => {
         const fetchPosts = async () => {
             const res = await fetch("http://localhost:3000/api/blog")
             const postsData = await res.json();
+
             setPosts(postsData);
         }
         fetchPosts();
@@ -22,6 +23,8 @@ const BlogList = () => {
                         <div key={id}>
                             <h1>{title}</h1>
                             <p >{content}</p>
+
+
                         </div>
                     )
                 }

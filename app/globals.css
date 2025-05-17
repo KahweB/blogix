@@ -6,6 +6,10 @@
 
 
 @theme inline {
+  --color-darkprimary: #248afd;
+  --color-darkprimaryHover: #1e70d3;
+  --color-lightprimary: #38454a;
+  --color-lightprimayHover: #2c373b;
   --color-primarycolor: #38454a;
   --color-secondarycolor: #2c373b;
   --color-background: var(--background);
@@ -124,4 +128,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.headerBg {
+  @apply bg-lightprimary dark:bg-darkprimary
 }

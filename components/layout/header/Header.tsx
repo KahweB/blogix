@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Search, User } from 'lucide-react'
 import Link from 'next/link'
 import MobileMenu from './MobileMenu'
+import { ModeToggle } from '@/components/ModeToggle'
 
 /* import {
     Sheet,
@@ -15,7 +16,7 @@ import MobileMenu from './MobileMenu'
 const Header = () => {
 
     return (
-        <div className='bg-secondarycolor shadow-sm top-0 z-50'>
+        <div className='headerBg shadow-sm top-0 z-50'>
             <div className='container mx-auto flex items-center justify-between px-4 py-3'>
                 <Link href="/" className='text-2xl text-white font-bold'>Logo</Link>
                 <nav className='hidden md:flex space-x-6'>
@@ -34,21 +35,7 @@ const Header = () => {
                             <User />
                         </Button>
                     </Link>
-
-
-                    {/* <Sheet open={isNavbarOpen}>
-                        <SheetTrigger asChild><Button onClick={() => setIsNavbarOpen(true)} className='md:hidden'><Menu /></Button></SheetTrigger>
-
-                        <SheetContent className='' onInteractOutside={() => setIsNavbarOpen(false)}>
-                            <SheetHeader>
-                                <SheetTitle>Menu</SheetTitle>
-                            </SheetHeader>
-                            <Link onClick={() => setIsNavbarOpen(false)} href="/" className='text-black font-bold hover:underline'>Home</Link>
-                            <Link onClick={() => setIsNavbarOpen(false)} href="/about" className='text-black font-bold hover:underline'>About</Link>
-                            <Link onClick={() => setIsNavbarOpen(false)} href="/blog" className='text-black font-bold hover:underline'>Blog</Link>
-                            <Link onClick={() => setIsNavbarOpen(false)} href="/contact" className='text-black font-bold hover:underline'>Contact</Link>
-                        </SheetContent>
-                    </Sheet> */}
+                    <ModeToggle></ModeToggle>
                     <MobileMenu />
 
 
