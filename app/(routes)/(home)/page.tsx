@@ -11,9 +11,9 @@ export default function Home() {
       <Image src="/seoimg.jpg" width={123} height={123} alt="blabber"></Image>
 
       <div>
-        <Input onChange={(e) => setHeaderText(e.target.value)} placeholder="change header text" className="w-120" />
-        <Input onChange={(e) => setFooterText(e.target.value)} placeholder="change footer text" className="w-120" />
-        <Input onChange={(e) => setText(e.target.value)} placeholder="change both texts" className="w-120" />
+        <Input onChange={(e) => setHeaderText(e.target.value)} placeholder="change header text" className="w-100" />
+        <Input onChange={(e) => setFooterText(e.target.value)} placeholder="change footer text" className="w-100" />
+        <Input onChange={(e) => setText(e.target.value)} placeholder="change both texts" className="w-100" />
       </div>
     </div>
 

@@ -1,6 +1,8 @@
 import { NextRequest } from "next/server";
 
 export async function GET(request: NextRequest) {
+    const { } = request;
+
     const posts = [
         { id: 1, title: " title numba 1", content: "content numba 1" },
         { id: 2, title: " title numba 2", content: "content numba 2" },

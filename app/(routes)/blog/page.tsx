@@ -1,8 +1,21 @@
 import React from 'react'
 
+interface Post {
+    id: number;
+    title: string;
+    content: string;
+}
 async function BlogPage() {
-    const res = await fetch("http://localhost:3000/api/blog");
-    const posts = await res.json();
+    const apiBaseUrl = process.env.NODE_ENV === "production" ? "https://your-production-domain.com" : "http://localhost:3000";
+    let posts: Post[] = [];
+    try {
+        const res = await fetch(`${apiBaseUrl}/api/blog`);
+        if (!res.ok) throw new Error(`HTTP ERROR status: ${res.status}`)
+        posts = await res.json();
+    } catch (e) {
+        console.error("API fetch error:", e);
+    }
+
 
     return (
         <div className='container mx-auto py-8'>
@@ -16,11 +29,8 @@ async function BlogPage() {
                             <h1>{title}</h1>
                             <p >{content}</p>
                         </div>
-
                     )
                 }
-
-
                 )}
             </ul>
         </div >
