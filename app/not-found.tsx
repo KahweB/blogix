@@ -4,7 +4,7 @@ const NotFound = () => {
     return (
         <div>
 
-            <h2 className='text-birincil'>NOTFOUND</h2>
+            <h2 className='text-birincil'>NOTFOUND cik lan buradan</h2>
         </div>
     )
 }
