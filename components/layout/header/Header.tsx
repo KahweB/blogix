@@ -1,9 +1,11 @@
-
+"use client"
 import { Button } from '@/components/ui/button'
 import { Search, User } from 'lucide-react'
 import Link from 'next/link'
 import MobileMenu from './MobileMenu'
 import { ModeToggle } from '@/components/ModeToggle'
+import useStore from '@/store/useStore'
+
 
 /* import {
     Sheet,
@@ -14,11 +16,12 @@ import { ModeToggle } from '@/components/ModeToggle'
 } from "@/components/ui/sheet" */
 
 const Header = () => {
+    const { headerText } = useStore()
 
     return (
         <div className='headerBg shadow-sm top-0 z-50'>
             <div className='container mx-auto flex items-center justify-between px-4 py-3'>
-                <Link href="/" className='text-2xl text-white font-bold'>Logo</Link>
+                <Link href="/" className='text-2xl text-white font-bold'>{headerText}</Link>
                 <nav className='hidden md:flex space-x-6'>
                     <Link href="/" className='text-white font-bold hover:underline'>Home</Link>
                     <Link href="/about" className='text-white font-bold hover:underline'>About</Link>
